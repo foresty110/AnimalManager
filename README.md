@@ -5,22 +5,15 @@
 classDiagram
 
 class Animal {
+<<abstract>>
   - String name
-  - AnimalType type
   - int age
   - int hunger
   - int happiness
   + Animal(String, int)
   + getName() String
   + getAge() int
-  + getType() 
   + bark()
-}
-
-class AnimalType {
-  <<enumeration>>
-  DOG
-  CAT
 }
 
 class Dog {
@@ -44,11 +37,10 @@ class AnimalManagement{
 }
 
 class Main {
-	void showMenu() 
+	main()
+	showMenu() 
 }
 
 Animal <|-- Cat
 Animal <|-- Dog
-Animal --> AnimalType : has
-AnimalManagement --> Animal
 ```
