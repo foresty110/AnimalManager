@@ -29,7 +29,6 @@ class Cat {
 class AnimalManagement{
   regist() // 동물 등록
   showList() // 동물 목록 조회 
-  sound() // 동물 소리 듣기 
   feed() // 먹이주기
   play() // 놀아주기
   sound() // 울음 소리 듣기 
