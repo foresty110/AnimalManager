@@ -33,12 +33,12 @@ class AnimalManagement{
   feed() // 먹이주기
   play() // 놀아주기
   sound() // 울음 소리 듣기 
-  checkStatus()() // 상태 조회 
+  checkStatus() // 상태 조회
+  showMenu() // 관리 메뉴 출력
 }
 
 class Main {
 	main()
-	showMenu() 
 }
 
 Animal <|-- Cat
