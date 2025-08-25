@@ -19,7 +19,7 @@ public class Main {
 
             //메뉴 입력받기
             System.out.print("\n메뉴를 선택하세요: ");
-            int menu = checkInput(scanner,7);
+            int menu = checkInput(scanner, 7);
 
             switch (menu) {
 
@@ -35,9 +35,9 @@ public class Main {
                     int age = checkInput(scanner, Integer.MAX_VALUE);
 
                     //동물 종류 입력받기
-                    String[] animalType = {"강아지","고양이"};
+                    String[] animalType = {"강아지", "고양이"};
                     for (int i = 0; i < animalType.length; i++) {
-                        System.out.print((i+1)+"."+animalType[i]+" ");
+                        System.out.print((i + 1) + "." + animalType[i] + " ");
                     }
                     System.out.println();
                     System.out.print("동물 종류를 선택하세요: ");
@@ -57,7 +57,7 @@ public class Main {
 
                     animalManagement.register(animal);
 
-                    System.out.println(name + "(" + animalType[type - 1] +" "+ age + "살)가 등록되었습니다.");
+                    System.out.println(name + "(" + animalType[type - 1] + " " + age + "살)가 등록되었습니다.");
                     break;
                 case 2:
                     //동물 목록 보기
