@@ -5,14 +5,71 @@
 classDiagram
 
 class Animal {
-<<abstract>>
+	<<abstract>>
   - String name
   - int age
   - int hunger
   - int happiness
+  - int favoriteFood
   + Animal(String, int)
   + getName() String
   + getAge() int
+  + bark()
+}
+
+class Bird {
+	<<abstract>>
+}
+
+class Mammal {
+	<<abstract>>
+}
+class Reptile {
+	<<abstract>>
+}
+
+class Flyable {
+	<<interface>>
+	+fly() void
+}
+
+class Swimmable {
+	<<interface>>
+	+swim() void
+}
+
+class WaterSprayable {
+	<<interface>>
+	+spray() void
+}
+
+class Eagle {
+  + Eagle(String, int)
+  + bark()
+}
+
+class Penguin {
+  + Penguin(String, int)
+  + bark()
+}
+
+class Lion {
+  + Lion(String, int)
+  + bark()
+}
+
+class Elephant {
+  + Elephant(String, int)
+  + bark()
+}
+
+class Snake {
+  + Snake(String, int)
+  + bark()
+}
+
+class Turtle {
+  + Turtle(String, int)
   + bark()
 }
 
@@ -40,6 +97,30 @@ class Main {
 	main()
 }
 
-Animal <|-- Cat
-Animal <|-- Dog
+Animal <|-- Bird
+Animal <|-- Mammal
+Animal <|-- Reptile
+
+Bird <|-- Eagle
+Bird <|-- Penguin
+
+Mammal <|-- Cat
+Mammal <|-- Dog
+Mammal <|-- Lion
+Mammal <|-- Elephant
+
+Reptile <|-- Snake
+Reptile <|-- Turtle
+
+Eagle ..|> Flyable
+
+Penguin ..|> Swimmable
+Cat ..|> Swimmable
+Dog ..|> Swimmable
+Lion ..|> Swimmable
+Elephant ..|> Swimmable
+Snake ..|> Swimmable
+Turtle ..|> Swimmable
+
+Elephant ..|> WaterSprayable
 ```
