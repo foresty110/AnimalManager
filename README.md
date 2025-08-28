@@ -19,18 +19,21 @@ class Animal {
 
 class Bird {
 	<<abstract>>
+	-int featherGrowth //깃털 성장 정도
+	+Fledging() void //첫 비행
+	+fly() void
 }
 
 class Mammal {
 	<<abstract>>
-}
-class Reptile {
-	<<abstract>>
+	-int milkConsumption //모유 섭취량
+	+Weaning() void //젖떼기
 }
 
-class Flyable {
-	<<interface>>
-	+fly() void
+class Reptile {
+	<<abstract>>
+	-boolean isShedding; //탈피 여부
+	+molt() void //탈피
 }
 
 class Swimmable {
@@ -38,10 +41,6 @@ class Swimmable {
 	+swim() void
 }
 
-class WaterSprayable {
-	<<interface>>
-	+spray() void
-}
 
 class Eagle {
   + Eagle(String, int)
@@ -61,6 +60,7 @@ class Lion {
 class Elephant {
   + Elephant(String, int)
   + bark()
+  +spray() void
 }
 
 class Snake {
@@ -112,8 +112,6 @@ Mammal <|-- Elephant
 Reptile <|-- Snake
 Reptile <|-- Turtle
 
-Eagle ..|> Flyable
-
 Penguin ..|> Swimmable
 Cat ..|> Swimmable
 Dog ..|> Swimmable
@@ -122,5 +120,4 @@ Elephant ..|> Swimmable
 Snake ..|> Swimmable
 Turtle ..|> Swimmable
 
-Elephant ..|> WaterSprayable
 ```
