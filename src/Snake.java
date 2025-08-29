@@ -1,11 +1,10 @@
-class Cat extends Mammal {
-    Cat(String name, int age) {
+public class Snake extends Reptile{
+    Snake(String name, int age) {
         super(name, age);
     }
 
     @Override
     public void bark() {
         super.bark();
-        System.out.println("야옹");
     }
 }

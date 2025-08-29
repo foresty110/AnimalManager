@@ -45,14 +45,5 @@ public class AnimalManagement {
         animals.get(index - 1).showStatus();
     }
 
-    void showMenu() {
-        System.out.print("\n=== 동물원 관리 시스템 ===" +
-                "\n1. 동물 등록" +
-                "\n2. 동물 목록 보기" +
-                "\n3. 동물과 놀기" +
-                "\n4. 먹이주기" +
-                "\n5. 동물 상태 확인" +
-                "\n6. 울음소리 듣기 " +
-                "\n7. 종료");
-    }
+
 }

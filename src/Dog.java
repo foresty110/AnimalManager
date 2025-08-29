@@ -1,4 +1,4 @@
-class Dog extends Animal {
+class Dog extends Mammal {
     Dog(String name, int age) {
         super(name, age);
     }
